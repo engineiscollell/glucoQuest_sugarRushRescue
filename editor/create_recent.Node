@@ -1,0 +1,14 @@
+CollisionShape2D
+MeshInstance2D
+Sprite2D
+Area2D
+Label
+Button
+AudioStreamPlayer2D
+Node
+TextureRect
+Control
+Node2D
+TextureButton
+RichTextLabel
+Panel
