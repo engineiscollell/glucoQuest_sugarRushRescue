@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=3 uid="uid://dipmwvb07pe3n"]
+
+[ext_resource type="Texture2D" uid="uid://tv73id5abkth" path="res://Gathering/Organs Pixel Art/Pancreas.png" id="1_hxw7e"]
+[ext_resource type="Script" uid="uid://cbse4kxaewa4c" path="res://Main scene code.gd" id="1_iybro"]
+[ext_resource type="Texture2D" uid="uid://ceclpx1s2tybr" path="res://Gathering/Minimalistic button/information.png" id="1_mjoln"]
+[ext_resource type="Texture2D" uid="uid://xycdyxqrlnk6" path="res://Gathering/Organs Pixel Art/Muscles.png" id="2_6n22f"]
+[ext_resource type="Texture2D" uid="uid://c7mv8bg00beo1" path="res://Gathering/Minimalistic button/book.png" id="2_ru8kk"]
+[ext_resource type="Texture2D" uid="uid://dvabekg187yj8" path="res://Gathering/Organs Pixel Art/Brain.png" id="3_w4tl3"]
+[ext_resource type="Texture2D" uid="uid://cgoulgfg57ik2" path="res://Gathering/Organs Pixel Art/Liver.png" id="4_iybro"]
+[ext_resource type="FontFile" uid="uid://bergb058qs6j5" path="res://Gathering/Bytesized-Regular.tres" id="5_w4tl3"]
+[ext_resource type="PackedScene" uid="uid://bccpii7fpl0j2" path="res://Background.tscn" id="8_w4tl3"]
+[ext_resource type="PackedScene" uid="uid://7nuval452b3k" path="res://OutGameMusic.tscn" id="10_jcyc5"]
+[ext_resource type="Script" uid="uid://f6dlide1bym6" path="res://MusicManager.gd" id="11_ret3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4tl3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iybro")
+
+[node name="TextureRect" parent="." instance=ExtResource("8_w4tl3")]
+show_behind_parent = true
+
+[node name="Pancreas" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 112.0
+offset_top = 198.0
+offset_right = 512.0
+offset_bottom = 598.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_hxw7e")
+texture_pressed = ExtResource("1_hxw7e")
+texture_hover = ExtResource("1_hxw7e")
+
+[node name="Muscles" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 324.0
+offset_top = 156.0
+offset_right = 823.0
+offset_bottom = 655.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("2_6n22f")
+texture_pressed = ExtResource("2_6n22f")
+texture_hover = ExtResource("2_6n22f")
+
+[node name="Brain" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 603.0
+offset_top = 170.0
+offset_right = 1103.0
+offset_bottom = 670.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3_w4tl3")
+texture_pressed = ExtResource("3_w4tl3")
+texture_hover = ExtResource("3_w4tl3")
+
+[node name="Liver" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 886.0
+offset_top = 193.0
+offset_right = 1246.0
+offset_bottom = 553.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("4_iybro")
+texture_pressed = ExtResource("4_iybro")
+texture_hover = ExtResource("4_iybro")
+
+[node name="Choose a level to start" type="Label" parent="."]
+offset_left = 234.0
+offset_top = 58.0
+offset_right = 984.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("5_w4tl3")
+theme_override_font_sizes/font_size = 60
+text = "¡Choose a level to start!"
+
+[node name="Information" type="Button" parent="."]
+offset_left = 297.0
+offset_top = 458.0
+offset_right = 374.0
+offset_bottom = 534.0
+theme_override_constants/icon_max_width = 75
+theme_override_icons/icon = ExtResource("1_mjoln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w4tl3")
+
+[node name="Label" type="Label" parent="Information"]
+layout_mode = 0
+offset_left = -162.0
+offset_top = 97.0
+offset_right = 228.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("5_w4tl3")
+theme_override_font_sizes/font_size = 30
+text = "Information and references"
+
+[node name="Book" type="Button" parent="."]
+offset_left = 785.0
+offset_top = 466.0
+offset_right = 866.0
+offset_bottom = 546.0
+theme_override_constants/icon_max_width = 75
+theme_override_icons/icon = ExtResource("2_ru8kk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w4tl3")
+
+[node name="Label" type="Label" parent="Book"]
+layout_mode = 0
+offset_left = -86.0
+offset_top = 86.0
+offset_right = 169.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("5_w4tl3")
+theme_override_font_sizes/font_size = 30
+text = "Learn how to play"
+
+[node name="MusicManager" parent="." instance=ExtResource("10_jcyc5")]
+script = ExtResource("11_ret3s")

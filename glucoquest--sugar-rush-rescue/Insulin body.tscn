@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://baiemek3w5le7"]
+
+[ext_resource type="Texture2D" uid="uid://bvth3m2uo5o4t" path="res://Gathering/Collectibles/Insulin.png" id="1_og8c6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvx83"]
+size = Vector2(63, 50)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(37, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_gvx83")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999998, -1)
+scale = Vector2(0.0935185, 0.0840278)
+texture = ExtResource("1_og8c6")

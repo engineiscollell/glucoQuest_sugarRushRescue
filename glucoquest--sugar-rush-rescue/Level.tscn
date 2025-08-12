@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccf4sbrxqqdds"]
+
+[ext_resource type="PackedScene" uid="uid://i7bfy3ue41mv" path="res://Pancreas character.tscn" id="1_bexhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhyq2"]
+size = Vector2(1148.75, 168.5)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(576.625, 570.25)
+shape = SubResource("RectangleShape2D_qhyq2")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_bexhn")]
+position = Vector2(278, 12)

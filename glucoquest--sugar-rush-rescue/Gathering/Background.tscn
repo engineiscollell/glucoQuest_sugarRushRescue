@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://64fy4l73nxnh"]
+
+[ext_resource type="Texture2D" uid="uid://tibe00wftplp" path="res://Gathering/Background.jpg" id="1_eega7"]
+
+[node name="Bakcground" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1280.0
+texture = ExtResource("1_eega7")

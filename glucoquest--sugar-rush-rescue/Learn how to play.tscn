@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://bulpfsnvspxma"]
+
+[ext_resource type="Script" uid="uid://cmplpt3lckdt" path="res://Turn back to menu.gd" id="1_1cfsx"]
+[ext_resource type="FontFile" uid="uid://bergb058qs6j5" path="res://Gathering/Bytesized-Regular.tres" id="1_3pncq"]
+[ext_resource type="PackedScene" uid="uid://bccpii7fpl0j2" path="res://Background.tscn" id="2_7lbwn"]
+[ext_resource type="PackedScene" uid="uid://7nuval452b3k" path="res://OutGameMusic.tscn" id="3_7lbwn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lbwn"]
+bg_color = Color(0.551149, 0.620253, 0.713598, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1cfsx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 52.0
+offset_right = 712.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("1_3pncq")
+theme_override_font_sizes/font_size = 70
+text = "Learn how to play!"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 65.0
+offset_top = 157.0
+offset_right = 1100.0
+offset_bottom = 533.0
+theme_override_fonts/normal_font = ExtResource("1_3pncq")
+theme_override_font_sizes/normal_font_size = 40
+text = "You’ll travel through 4 stages, each focused on a different organ in your body. Before each stage begins, you’ll see a quick preview explaining:
+
+->Where you are (which organ).
+
+->Why it matters for blood sugar control.
+
+->What your main goal is in that level.
+
+The challenges start simple and become trickier as you go—so practice each level to become a true glucose-balancing hero!
+
+Keeping your glucose levels balanced is the main challenge. Here’s how different foods affect it:
+
+Healthy Foods (e.g., Fruits and Whole Grains)
+	Provide a steady boost without causing big spikes.
+	Help you stay in the safe (green) zone of your glucose meter.
+	Examples: Apples, bananas, oats, brown bread.
+
+Sugary Treats (e.g., Candy, Soda, Cake)
+	Cause a rapid increase in your glucose meter.
+	Too many can push you into the danger zone!
+	Examples: Lollipops, sugary drinks, donuts, chocolate bars.
+
+Balance is everything: pick the right foods to avoid big highs or lows. Make mindful choices, and remember that small healthy snacks can keep you on track!
+
+With each level, you’ll discover fun ways to stay balanced. Keep an eye on your glucose meter, stay in the green zone, and aim for a perfect finish every time. Enjoy learning about these vital organs as you play!"
+
+[node name="TextureRect" parent="." instance=ExtResource("2_7lbwn")]
+show_behind_parent = true
+
+[node name="Node" parent="." instance=ExtResource("3_7lbwn")]
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 111.0
+offset_top = 546.0
+offset_right = 292.0
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("1_3pncq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_7lbwn")
+text = "Menu"

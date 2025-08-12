@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://i7bfy3ue41mv"]
+
+[ext_resource type="Texture2D" uid="uid://cinp3xlkhyrms" path="res://Gathering/Backgrounds and characters/Pancreas character.png" id="1_261q5"]
+[ext_resource type="Script" uid="uid://dr7u6cm0xgxc1" path="res://Player.gd" id="2_cwmvq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_88mto"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cwmvq"]
+radius = 34.9998
+height = 117.992
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("2_cwmvq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.201789, 0.188793)
+texture = ExtResource("1_261q5")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
+show_behind_parent = true
+position = Vector2(1.27193, -8.24644)
+scale = Vector2(267.103, 82.4645)
+mesh = SubResource("BoxMesh_88mto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 1)
+rotation = 1.57432
+shape = SubResource("CapsuleShape2D_cwmvq")

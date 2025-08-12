@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://tjxwj18q2xe6"]
+
+[ext_resource type="Script" uid="uid://46y886ut2n6" path="res://Collectible.gd" id="1_riivg"]
+[ext_resource type="Texture2D" uid="uid://br35griqgyin2" path="res://Gathering/Collectibles/Glucose.png" id="2_14lm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vj64i"]
+size = Vector2(133, 126)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_riivg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159, 164)
+texture = ExtResource("2_14lm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(157, 165)
+shape = SubResource("RectangleShape2D_vj64i")

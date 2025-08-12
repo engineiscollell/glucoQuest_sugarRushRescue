@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://s0jc3q0siihk"]
+
+[ext_resource type="Script" uid="uid://cmplpt3lckdt" path="res://Turn back to menu.gd" id="1_isrc2"]
+[ext_resource type="FontFile" uid="uid://bergb058qs6j5" path="res://Gathering/Bytesized-Regular.tres" id="1_rg0sg"]
+[ext_resource type="PackedScene" uid="uid://bccpii7fpl0j2" path="res://Background.tscn" id="2_gmjoj"]
+[ext_resource type="PackedScene" uid="uid://7nuval452b3k" path="res://OutGameMusic.tscn" id="3_gmjoj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmjoj"]
+bg_color = Color(0.551149, 0.620253, 0.713598, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_isrc2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 424.0
+offset_top = 557.0
+offset_right = 1069.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("1_rg0sg")
+theme_override_font_sizes/font_size = 30
+text = "Game created by Lluís Francesc Collell Erra"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 53.0
+offset_right = 577.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("1_rg0sg")
+theme_override_font_sizes/font_size = 70
+text = "About this game:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 67.0
+offset_top = 187.0
+offset_right = 1062.0
+offset_bottom = 475.0
+theme_override_fonts/normal_font = ExtResource("1_rg0sg")
+theme_override_font_sizes/normal_font_size = 40
+text = "GlucoQuest: Sugar Rush Rescue was developed for GlucoJam, an event that promotes awareness about diabetes through interactive video games. Here, you’ll learn in a fun way about the pancreas, insulin, and how to keep blood sugar levels balanced.
+
+The information about the pancreas, insulin, and glucose levels used in this game is based on resources from the Federación Española de Diabetes (FEDE).
+To learn more, you can visit their website: fedesp.es
+
+We hope you enjoy playing and discover why maintaining balanced blood sugar is so important!"
+
+[node name="TextureRect" parent="." instance=ExtResource("2_gmjoj")]
+show_behind_parent = true
+
+[node name="Node" parent="." instance=ExtResource("3_gmjoj")]
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 118.0
+offset_top = 538.0
+offset_right = 299.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("1_rg0sg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmjoj")
+text = "Menu"

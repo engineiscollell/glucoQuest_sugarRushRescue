@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q4py3re15j36"
+path="res://.godot/imported/error sound.wav-f7efaf27fc81a715ce4fbd4722e6742c.sample"
+
+[deps]
+
+source_file="res://Gathering/Music and sounds/error sound.wav"
+dest_files=["res://.godot/imported/error sound.wav-f7efaf27fc81a715ce4fbd4722e6742c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

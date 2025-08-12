@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwp4qol7p5cn"]
+
+[ext_resource type="Texture2D" uid="uid://dv0eb7vs3lxwo" path="res://Gathering/Pancreas background.jpg" id="1_xo3b1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_xo3b1")

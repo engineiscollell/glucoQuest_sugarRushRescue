@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ue23xqo5dreq"]
+
+[ext_resource type="Script" uid="uid://cl0vef2bp1ho3" path="res://Space to start.gd" id="1_atyfl"]
+[ext_resource type="FontFile" uid="uid://bergb058qs6j5" path="res://Gathering/Bytesized-Regular.tres" id="1_enqm7"]
+[ext_resource type="PackedScene" uid="uid://dbwp4qol7p5cn" path="res://Pancreas background.tscn" id="1_flaju"]
+[ext_resource type="PackedScene" uid="uid://cytud682hjhq4" path="res://InGameMusic.tscn" id="3_h1nb0"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_atyfl")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 31.0
+offset_right = 1010.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("1_enqm7")
+theme_override_font_sizes/font_size = 70
+text = "Welcome to the pancreas!"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 129.0
+offset_top = 173.0
+offset_right = 1052.0
+offset_bottom = 566.0
+theme_override_fonts/normal_font = ExtResource("1_enqm7")
+theme_override_font_sizes/bold_italics_font_size = 4
+theme_override_font_sizes/italics_font_size = 4
+theme_override_font_sizes/mono_font_size = 3
+theme_override_font_sizes/normal_font_size = 40
+text = "Hey there, adventurer!
+ You’ve just arrived at a super important part of the body called the pancreas. This awesome organ creates insulin, which helps keep your blood sugar levels just right
+
+Never TOO HIGH and never TOO LOW.
+
+To mantain a good health inside the body we'll need to:
+->Collect healthy foods for steady energy.
+->Use insulin icons whenever your sugar levels start to climb too high.
+->Watch out for sugary sweets that can quickly push your blood sugar into the danger zone!"
+horizontal_alignment = 1
+
+[node name="SpaceLabel" type="Label" parent="."]
+offset_left = 276.0
+offset_top = 583.0
+offset_right = 896.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("1_enqm7")
+theme_override_font_sizes/font_size = 30
+text = "Click 'space' to enter the game"
+horizontal_alignment = 1
+
+[node name="Control" parent="." instance=ExtResource("1_flaju")]
+show_behind_parent = true
+
+[node name="Node" parent="." instance=ExtResource("3_h1nb0")]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bre42fdqbgfny"]
+
+[ext_resource type="Script" uid="uid://cmplpt3lckdt" path="res://Turn back to menu.gd" id="1_n26ka"]
+[ext_resource type="FontFile" uid="uid://bergb058qs6j5" path="res://Gathering/Bytesized-Regular.tres" id="1_rfwix"]
+[ext_resource type="PackedScene" uid="uid://bccpii7fpl0j2" path="res://Background.tscn" id="2_xwhpd"]
+[ext_resource type="AudioStream" uid="uid://u6ibdfrakao7" path="res://OutGame music.ogg" id="3_xwhpd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukrno"]
+bg_color = Color(0.551149, 0.620253, 0.713598, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n26ka")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 75.0
+offset_right = 1136.0
+offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("1_rfwix")
+theme_override_font_sizes/font_size = 90
+text = "Well played! / Nice try!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -3.0
+offset_top = 267.0
+offset_right = 1129.0
+offset_bottom = 476.0
+theme_override_fonts/font = ExtResource("1_rfwix")
+theme_override_font_sizes/font_size = 40
+text = "Your score was: 50 
+You maintained a perfect glucose/ insulin proportion!
+Your glucose levels were too low!
+Your gluclose levels were too high!"
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 488.0
+offset_top = 531.0
+offset_right = 669.0
+offset_bottom = 589.0
+theme_override_fonts/font = ExtResource("1_rfwix")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ukrno")
+text = "Menu"
+
+[node name="TextureRect" parent="." instance=ExtResource("2_xwhpd")]
+show_behind_parent = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xwhpd")
+autoplay = true

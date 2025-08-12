@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw45jp325byxx"]
+
+[ext_resource type="Texture2D" uid="uid://4hgpcqkml65d" path="res://Gathering/Collectibles/GameOver.png" id="1_1wytt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvx83"]
+size = Vector2(95, 64)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0uduq"]
+albedo_color = Color(0.568973, 0.568973, 0.568973, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wwrmq"]
+material = SubResource("StandardMaterial3D_0uduq")
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(37, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_gvx83")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999998, -1)
+scale = Vector2(0.0935185, 0.0840278)
+texture = ExtResource("1_1wytt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+show_behind_parent = true
+position = Vector2(0.999997, -1)
+scale = Vector2(96, 66)
+mesh = SubResource("BoxMesh_wwrmq")

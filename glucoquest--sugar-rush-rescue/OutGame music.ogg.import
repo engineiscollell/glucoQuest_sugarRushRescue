@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://u6ibdfrakao7"
+path="res://.godot/imported/OutGame music.ogg-70c9d781277bb20e0af30d98e1970ec7.oggvorbisstr"
+
+[deps]
+
+source_file="res://OutGame music.ogg"
+dest_files=["res://.godot/imported/OutGame music.ogg-70c9d781277bb20e0af30d98e1970ec7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
